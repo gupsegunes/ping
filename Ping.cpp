@@ -1,4 +1,4 @@
-#include "ping.hpp"
+#include "Ping.hpp"
 void Ping::start() {}
 void Ping::tick() {}
 void Ping::stop() {}
