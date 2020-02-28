@@ -7,6 +7,12 @@ isaac_app(
 
 isaac_cc_module(
   name = "ping_components",
-  srcs = ["Ping.cpp"],
-  hdrs = ["Ping.hpp"],
+  srcs = [
+    "Ping.cpp",
+    "Pong.cpp"
+  ],
+  hdrs = [
+    "Ping.hpp",
+    "Pong.hpp"
+  ],
 )

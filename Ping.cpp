@@ -6,5 +6,8 @@ void Ping::start() {
 }
 
 void Ping::tick() {
-  LOG_INFO(get_message().c_str());
+  // create and publish a ping message
+  auto proto = tx_ping().initProto();
+  proto.setMessage(get_message());
+  tx_ping().publish();
 }

@@ -9,13 +9,35 @@
         "name": "ping",
         "components": [
           {
+            "name": "message_ledger",
+            "type": "isaac::alice::MessageLedger"
+          },
+          {
             "name": "ping",
             "type": "Ping"
           }
-         ]
+        ]
+      },
+      {
+        "name": "pong",
+        "components": [
+          {
+            "name": "message_ledger",
+            "type": "isaac::alice::MessageLedger"
+          },
+          {
+            "name": "pong",
+            "type": "Pong"
+          }
+        ]
       }
     ],
-    "edges": []
+    "edges": [
+      {
+        "source": "ping/ping/ping",
+        "target": "pong/pong/trigger"
+      }
+    ]
   },
   "config": {
     "ping" : {
